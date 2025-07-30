@@ -20,7 +20,7 @@ public class WeatherForecastController : ControllerBase
     public IActionResult Get()
     {
         var summaries = _configuration.GetSection("WeatherSettings:Summaries").Get<string[]>() ?? Array.Empty<string>();
-        
+
         var forecast = Enumerable.Range(1, 5).Select(index =>
             new WeatherForecast
             (
@@ -29,7 +29,7 @@ public class WeatherForecastController : ControllerBase
                 summaries.Length > 0 ? summaries[Random.Shared.Next(summaries.Length)] : null
             ))
             .ToArray();
-            
+
         return Ok(forecast);
     }
 }
