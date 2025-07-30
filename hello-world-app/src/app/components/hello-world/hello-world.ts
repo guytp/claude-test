@@ -8,7 +8,7 @@ import { HelloWorldService } from '../../services/hello-world';
   styleUrl: './hello-world.scss'
 })
 export class HelloWorldComponent implements OnInit {
-  message: string = '';
+  message: string | null = null;
 
   constructor(private helloWorldService: HelloWorldService) {}
 
