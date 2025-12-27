@@ -171,11 +171,53 @@ After installing the .NET SDK on **any** operating system, you should verify tha
 
 ### 5.1 Run `dotnet --version`
 
-(Verification steps and expected output will be added in the next phase)
+1. Open a **new** terminal or command prompt:
+   - Windows: Command Prompt, PowerShell, or Windows Terminal.
+   - macOS: Terminal.
+   - Linux: Your usual terminal application.
+2. Type this command and press Enter:
+   ```bash
+   dotnet --version
+   ```
+3. Expected result:
+   - The terminal prints **one line** showing a version number, for example:
+     ```
+     8.0.100
+     ```
+   - The exact numbers may differ, but it should start with `8.` or higher.
+
+If you see a version number that starts with `8.`, your SDK is installed and available.
+
+> If `dotnet --version` fails, see the **Troubleshooting** section below.
 
 ### 5.2 Optional: Run `dotnet --info`
 
-(Optional verification steps and example output will be added in the next phase)
+For more details about your installation:
+1. In the same terminal, run:
+   ```bash
+   dotnet --info
+   ```
+2. Expected result:
+   - A multi-line report containing information such as:
+     - .NET SDK versions installed.
+     - .NET runtime versions installed.
+     - OS platform, version, and architecture.
+     - The base path where .NET is installed.
+
+Example (shortened):
+```text
+.NET SDK (reflecting any global.json):
+ Version:   8.0.100
+ Commit:    123456789
+
+Runtime Environment:
+ OS Name:     Windows
+ OS Version:  10.0.22631
+ RID:         win10-x64
+ Base Path:   C:\Program Files\dotnet\sdk\8.0.100\
+```
+
+> If `dotnet --version` or `dotnet --info` fails, see the **Troubleshooting** section below.
 
 ---
 
