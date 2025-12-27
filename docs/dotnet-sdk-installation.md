@@ -229,9 +229,12 @@ For the **CSharp Hello Learner** exercises, you only need three things:
 2. **A text editor** (any simple text editor will work).
 3. **A terminal / command prompt** where you can type and run `dotnet` commands.
 
-You **do not** need a full Integrated Development Environment (IDE) like Visual Studio or Rider to follow the early lessons.
+You **do not** need a full Integrated Development Environment (IDE) like Visual Studio or Rider to follow the early lessons. These tools are helpful later, but they can add extra complexity for beginners.
 
-(Additional details about the minimal tooling workflow will be added in the next phase)
+The main workflow will be:
+1. Edit `Program.cs` in your text editor.
+2. Use the terminal to run `dotnet build` or `dotnet run`.
+3. See the output in the terminal.
 
 ---
 
@@ -241,11 +244,37 @@ Once the .NET SDK is installed, most of your learning with CSharp Hello Learner 
 
 ### 7.1 What You Can Do Offline
 
-(List of offline-capable commands and workflows will be added in the next phase)
+With only the local SDK, text editor, and terminal, you can:
+- Create a new console project (once the relevant story is completed) using:
+  ```bash
+  dotnet new console
+  ```
+- Edit `Program.cs` locally in your text editor.
+- Build your project:
+  ```bash
+  dotnet build
+  ```
+- Run your project:
+  ```bash
+  dotnet run
+  ```
+- Experiment with:
+  - Different console messages.
+  - Variables and data types.
+  - User input.
+  - Conditionals and loops.
+  - Methods and simple refactoring.
+
+All of these actions use only the SDK that is installed on your machine and do **not** require an internet connection.
 
 ### 7.2 When You Still Need the Internet
 
-(List of operations that require internet connectivity will be added in the next phase)
+You typically only need the internet to:
+- Download and install the .NET SDK (the steps in this guide).
+- Update the SDK to a newer version.
+- Read documentation or learning materials that are online.
+
+> Tip: If you expect to be offline for a while, you can download or print the key pages of the CSharp Hello Learner materials in advance.
 
 ---
 
@@ -255,23 +284,98 @@ This section lists common problems beginners may see and simple steps to fix the
 
 #### Issue 1: `dotnet` is Not Recognized / Command Not Found
 
-(Troubleshooting guidance will be added in the next phase)
+**Symptom:**
+- Windows: You see an error like:
+  ```
+  'dotnet' is not recognized as an internal or external command,
+  operable program or batch file.
+  ```
+- macOS / Linux: You see:
+  ```
+  command not found: dotnet
+  ```
+
+**Possible Causes and Fixes:**
+- The terminal window was open **before** you installed the SDK.
+  - Close the terminal or command prompt.
+  - Open a **new** one and try `dotnet --version` again.
+- The installation did not complete successfully.
+  - Re-run the installer (Windows/macOS) or installation commands (Linux).
+  - Watch for any error messages during install.
+- On macOS / Linux, the `dotnet` folder might not be on your PATH.
+  1. Close and re-open your terminal.
+  2. Run:
+     ```bash
+     which dotnet
+     ```
+  3. If nothing is printed, check the official docs for PATH setup:
+     - macOS: `https://learn.microsoft.com/dotnet/core/install/macos`
+     - Linux: `https://learn.microsoft.com/dotnet/core/install/linux`
 
 #### Issue 2: `dotnet --version` Shows an Older Version (e.g. 6.x or 7.x)
 
-(Troubleshooting guidance will be added in the next phase)
+**Symptom:**
+- You run `dotnet --version` and see something like:
+  ```
+  6.0.4xx
+  ```
+  or
+  ```
+  7.0.1xx
+  ```
+
+**Fix:**
+1. Download and install the **.NET 8 SDK** using this guide or from:
+   - `https://dotnet.microsoft.com/download`
+2. After installing .NET 8, open a **new** terminal and run:
+   ```bash
+   dotnet --version
+   ```
+3. If you still only see 6.x or 7.x, check that the `dotnet` you are running is the expected one:
+   - On macOS / Linux, run:
+     ```bash
+     which dotnet
+     ```
+   - On Windows (PowerShell), run:
+     ```powershell
+     Get-Command dotnet
+     ```
+4. If necessary, reinstall the .NET 8 SDK from the official site and repeat the verification.
+
+> Note: It is fine to have **multiple SDKs** installed. For new projects, .NET usually chooses the **latest** SDK available.
 
 #### Issue 3: Insufficient Permissions on Linux
 
-(Troubleshooting guidance will be added in the next phase)
+**Symptom:**
+- You see errors like `permission denied` or messages that you are not allowed to install packages.
+
+**Fix:**
+1. Make sure you are using `sudo` when running system-level install commands. For example:
+   ```bash
+   sudo apt-get install -y dotnet-sdk-8.0
+   ```
+2. If you still do not have permission, you may be using a **managed** or **locked-down** machine (for example, a school or company device).
+   - Contact your system administrator and ask them to install the .NET 8 SDK for you.
 
 #### Issue 4: Installer Fails or Stops Unexpectedly (Windows/macOS)
 
-(Troubleshooting guidance will be added in the next phase)
+**Symptom:**
+- The installer shows an error and does not complete.
+
+**Fix:**
+1. Restart your computer and try running the installer again.
+2. Make sure you downloaded the correct installer for your system (x64 vs ARM64).
+3. Check if any antivirus or security software is blocking the install and temporarily allow the official installer if safe to do so.
+4. If the issue continues, check the official troubleshooting sections:
+   - Windows: `https://learn.microsoft.com/dotnet/core/install/windows`
+   - macOS: `https://learn.microsoft.com/dotnet/core/install/macos`
 
 #### Issue 5: `dotnet --info` Works but Project Commands Fail Later
 
-(Troubleshooting guidance will be added in the next phase)
+This is covered more deeply in other troubleshooting stories, but for this guide:
+- If `dotnet --info` works, the SDK is installed.
+- Any later build or run errors will usually be related to the project files, not the SDK installation.
+- When that happens, re-check the instructions in the relevant CSharp Hello Learner story.
 
 ---
 
