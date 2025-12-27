@@ -27,11 +27,33 @@ This section shows you how to download and install the .NET 8 SDK on a Windows c
 
 ### 2.1 Steps to Install
 
-(Detailed installation steps will be added in the next phase)
+1. Open a web browser.
+2. Go to the official .NET downloads page:
+   - `https://dotnet.microsoft.com/download`
+3. Find the section for **.NET 8 (Long Term Support)**.
+4. Under **.NET 8 SDK**, choose the installer for **Windows x64** (most PCs) or **Windows ARM64** if you know you have an ARM-based device.
+5. Download the installer file (it will have a `.exe` extension).
+6. Once the download finishes, double-click the `.exe` file to start the installer.
+7. If Windows asks whether to allow this app to make changes, choose **Yes**.
+8. Read and accept the license terms.
+9. Keep the default options unless you know you need something different.
+10. Click **Install** and wait for the setup to complete.
+11. Click **Close** to exit the installer.
+12. Close and **re-open** any open **Command Prompt**, **PowerShell**, or **Windows Terminal** windows so they can pick up the new PATH settings.
+
+> Tip: If you have problems with these steps, you can also follow the official Windows instructions: `https://learn.microsoft.com/dotnet/core/install/windows`.
 
 ### 2.2 How to Open a Terminal on Windows
 
-(Instructions for opening Command Prompt, PowerShell, or Windows Terminal will be added in the next phase)
+- **Command Prompt (cmd.exe)**:
+  - Press `Win + R`.
+  - Type `cmd`.
+  - Press **Enter**.
+- **PowerShell or Windows Terminal**:
+  - Press `Win + X`.
+  - Choose **Windows PowerShell**, **PowerShell**, or **Terminal** from the menu.
+
+> You can use **Command Prompt**, **PowerShell**, or **Windows Terminal** for all `dotnet` commands in this guide.
 
 ---
 
@@ -41,11 +63,31 @@ This section shows you how to download and install the .NET 8 SDK on a Mac compu
 
 ### 3.1 Steps to Install
 
-(Detailed installation steps will be added in the next phase)
+1. Open a web browser.
+2. Go to `https://dotnet.microsoft.com/download`.
+3. In the **.NET 8** section, choose the **macOS** tab.
+4. Decide which installer you need:
+   - **macOS x64** for **Intel-based** Macs.
+   - **macOS Arm64** for **Apple Silicon** Macs (M1, M2, M3, etc.).
+   - You can check this in ** > About This Mac** if you are not sure.
+5. Download the `.pkg` installer for your architecture.
+6. Once the download finishes, double-click the `.pkg` file.
+7. Follow the steps in the installer:
+   - Read and accept the license.
+   - Keep the default options unless you know you need something different.
+   - Enter your macOS password if asked.
+8. Wait for the installer to complete, then close it.
+9. Open a **new** Terminal window to make sure it picks up the new PATH configuration.
+
+> Tip: If anything looks different on your Mac, you can compare with the official macOS install instructions: `https://learn.microsoft.com/dotnet/core/install/macos`.
 
 ### 3.2 How to Open a Terminal on macOS
 
-(Instructions for opening Terminal on macOS will be added in the next phase)
+- Press `Cmd + Space` to open **Spotlight**.
+- Type **Terminal**.
+- Press **Enter**.
+
+> You will run all `dotnet` commands for this guide inside the Terminal app.
 
 ---
 
@@ -55,19 +97,71 @@ This section shows you how to install the .NET 8 SDK on Linux using your system'
 
 ### 4.1 General Guidance
 
-(General Linux installation guidance will be added in the next phase)
+On Linux, .NET is usually installed using your system package manager (for example `apt`, `dnf`, or `zypper`). The exact commands can change over time, so always check the official Microsoft documentation if something does not match your system.
+
+Official Linux installation documentation:
+- `https://learn.microsoft.com/dotnet/core/install/linux`
+
+You will normally need **sudo** (administrator) access to install the SDK.
+
+- Open a terminal application on your Linux desktop (e.g. **Terminal**, **Konsole**, **GNOME Terminal**, or similar).
+- Use your distribution's package manager together with Microsoft's official package repository.
+- The examples below show a typical flow for common distributions. If the commands do not work or look different from your system, follow the exact instructions for your distro on the official site above.
 
 ### 4.2 Debian / Ubuntu Example (apt-based)
 
-(Debian/Ubuntu installation steps will be added in the next phase)
+1. Open a terminal.
+2. Update your package lists:
+   ```bash
+   sudo apt-get update
+   ```
+3. Make sure you have basic HTTPS and certificate support installed (if these packages are missing, install them):
+   ```bash
+   sudo apt-get install -y wget apt-transport-https software-properties-common
+   ```
+4. In your browser, go to the official Linux install docs:
+   - `https://learn.microsoft.com/dotnet/core/install/linux`
+5. Choose **Debian** or **Ubuntu** and follow the steps to:
+   - Add the Microsoft package signing key.
+   - Add the Microsoft package repository for **.NET 8**.
+   (Copy and paste the exact commands from the docs into your terminal.)
+6. After adding the Microsoft repository, update package lists again:
+   ```bash
+   sudo apt-get update
+   ```
+7. Install the .NET 8 SDK:
+   ```bash
+   sudo apt-get install -y dotnet-sdk-8.0
+   ```
+8. Wait for the install to finish, then close and re-open your terminal.
+
+> Note: The exact repository commands (for example `wget https://packages.microsoft.com/...`) may change over time. Always copy them from the official Microsoft documentation.
 
 ### 4.3 Fedora / RHEL / CentOS Example (dnf / yum-based)
 
-(Fedora/RHEL/CentOS installation steps will be added in the next phase)
+1. Open a terminal.
+2. In your browser, open the Linux install docs:
+   - `https://learn.microsoft.com/dotnet/core/install/linux`
+3. Choose **Fedora**, **RHEL**, or **CentOS** (whichever matches your system).
+4. Follow the instructions there to:
+   - Add the Microsoft package repository (usually by downloading a `.repo` file to `/etc/yum.repos.d/`).
+   - Import the Microsoft GPG key if required.
+5. Once the repository is configured, ensure your package index is up to date and install the SDK. For example on Fedora:
+   ```bash
+   sudo dnf install dotnet-sdk-8.0
+   ```
+   On some RHEL/CentOS systems you may use `yum` instead of `dnf`.
+6. When the installation completes, close and re-open your terminal.
 
 ### 4.4 Other Linux Distributions
 
-(Guidance for other Linux distributions will be added in the next phase)
+- If you use another distribution (such as Arch, openSUSE, Alpine, or others), follow the official guide:
+  - `https://learn.microsoft.com/dotnet/core/install/linux`
+- Select your distribution and follow the specific commands shown there.
+- The overall idea is always:
+  1. Add Microsoft's official package repository or use your distro's provided packages where recommended.
+  2. Install `dotnet-sdk-8.0` (or newer) with your package manager.
+  3. Open a new terminal and run `dotnet --version` to verify.
 
 ---
 
