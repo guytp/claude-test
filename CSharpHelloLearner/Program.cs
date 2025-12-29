@@ -6,6 +6,6 @@
 // WriteLine prints a line of text and moves the cursor to the next line.
 // "Hello, World!" is a string, which means plain text.
 // The semicolon marks the end of this statement.
-Console.WriteLine("Hello, World!");
+Console.WriteLine("Hello, CSharp Hello Learner!");
 
 // When this line finishes, the program has nothing else to do and exits.
