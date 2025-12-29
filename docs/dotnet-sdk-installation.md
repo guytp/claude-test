@@ -70,6 +70,24 @@ Follow these steps to download and install the .NET 8 SDK on a Windows computer.
 
 > **Tip:** If you have problems with these steps, you can also follow the official Windows instructions at https://learn.microsoft.com/dotnet/core/install/windows
 
+### How to Open a Terminal on Windows
+
+You can use **Command Prompt**, **PowerShell**, or **Windows Terminal** to run `dotnet` commands. Here are the quickest ways to open each one:
+
+**Command Prompt (cmd.exe):**
+1. Press `Win + R` to open the Run dialog.
+2. Type `cmd` and press **Enter**.
+
+**PowerShell:**
+1. Press `Win + X` to open the Power User menu.
+2. Select **Windows PowerShell** or **PowerShell** from the list.
+
+**Windows Terminal** (if installed):
+1. Press `Win + X` to open the Power User menu.
+2. Select **Terminal** from the list.
+
+> Any of these terminals will work for the `dotnet` commands used in this guide. Choose whichever you prefer.
+
 ---
 
 ## 3. Install .NET 8+ SDK on macOS
@@ -95,6 +113,21 @@ Follow these steps to download and install the .NET 8 SDK on a Mac.
 9. **Important**: Open a **new** Terminal window after installation. This ensures the terminal can find the newly installed `dotnet` command.
 
 > **Tip:** If anything looks different on your Mac, you can compare with the official macOS install instructions at https://learn.microsoft.com/dotnet/core/install/macos
+
+### How to Open a Terminal on macOS
+
+The **Terminal** app is where you will run all `dotnet` commands. Here are two ways to open it:
+
+**Using Spotlight (quickest):**
+1. Press `Cmd + Space` to open Spotlight Search.
+2. Type `Terminal` and press **Enter**.
+
+**Using Finder:**
+1. Open **Finder**.
+2. Go to **Applications** → **Utilities**.
+3. Double-click **Terminal**.
+
+> The Terminal app will open a window where you can type commands. This is where you will run `dotnet --version` and other commands.
 
 ---
 
@@ -183,6 +216,20 @@ The overall approach is the same:
 3. Open a new terminal and run `dotnet --version` to verify the installation.
 
 > **Tip:** If your distribution is not listed or the commands do not work, check the official documentation for alternative installation methods such as the .NET install script or manual tarball installation.
+
+### 4.5 How to Open a Terminal on Linux
+
+Linux provides a terminal application where you will run all `dotnet` commands. The name and location vary depending on your desktop environment, but here are the most common ways to open it:
+
+**Using a keyboard shortcut (works on many distributions):**
+- Press `Ctrl + Alt + T` to open a terminal window.
+
+**Using the application menu:**
+- Look for an application called **Terminal**, **GNOME Terminal**, **Konsole**, **xterm**, or similar in your applications menu.
+- On GNOME-based desktops (such as Ubuntu), search for "Terminal" in the Activities overview.
+- On KDE-based desktops, look for **Konsole** in the application menu.
+
+> Once the terminal is open, you can type commands like `dotnet --version` to verify your installation.
 
 ---
 
