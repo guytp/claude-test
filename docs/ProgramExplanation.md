@@ -39,6 +39,62 @@ Here's what happens step by step:
 
 This hidden `Main` method is the **entry point** of your program. It's where your program begins running every time you start it.
 
+## From Code to Terminal: What Happens When You Run `dotnet run`
+
+When you run your program using `dotnet run`, several things happen in order. Let's trace the exact path from your code to the output you see in the terminal.
+
+### Step-by-Step Execution
+
+1. **You type `dotnet run`**
+   - This command tells .NET to build your project (if needed) and then run it
+
+2. **.NET builds the project**
+   - The compiler checks your code for errors
+   - It creates the hidden `Main` method and wraps your top-level statements inside it
+   - Your code is turned into a program the computer can execute
+
+3. **The .NET runtime starts your program**
+   - The runtime finds the entry point (the hidden `Main` method)
+   - Execution begins at this Main method
+
+4. **The runtime runs your top-level statements**
+   - Your code in `Program.cs` executes from top to bottom
+   - The runtime processes each line in order
+
+5. **The runtime reaches `Console.WriteLine`**
+   - When execution reaches this line:
+     ```csharp
+     Console.WriteLine("Hello, CSharp Hello Learner!");
+     ```
+   - The `Console` class talks to your terminal
+   - `WriteLine` prints the text and moves to the next line
+
+6. **You see the output in your terminal**
+   - The text appears in the terminal window:
+     ```
+     Hello, CSharp Hello Learner!
+     ```
+
+7. **The program has nothing more to do**
+   - There are no more statements to execute
+   - The program exits cleanly and returns to the terminal prompt
+
+### Code to Output Mapping
+
+Here is the exact connection between the code line and what appears in your terminal:
+
+**The code in Program.cs:**
+```csharp
+Console.WriteLine("Hello, CSharp Hello Learner!");
+```
+
+**What you see in your terminal:**
+```
+Hello, CSharp Hello Learner!
+```
+
+Every time you run `dotnet run`, this same process repeats. The text inside the quotes is exactly what appears in your terminal window.
+
 ## Cross-Platform Compatibility
 
 This `Program.cs` file works the same way on Windows, macOS, and Linux. As long as you have .NET 8 installed and can run `dotnet run` in a terminal, your program will behave identically across all platforms.
