@@ -235,7 +235,78 @@ Linux provides a terminal application where you will run all `dotnet` commands. 
 
 ## 5. Verify Your Installation
 
-*Content coming in next step*
+After installing the .NET SDK on **any** operating system, you should verify that it is installed correctly and available in your terminal. This section applies to Windows, macOS, and Linux.
+
+### 5.1 Run `dotnet --version`
+
+This is the primary way to check that the .NET SDK is installed and working.
+
+1. Open a **new** terminal or command prompt:
+   - **Windows**: Command Prompt, PowerShell, or Windows Terminal (see Section 2 for how to open these).
+   - **macOS**: Terminal (see Section 3 for how to open it).
+   - **Linux**: Your terminal application (see Section 4.5 for how to open it).
+
+   > **Important**: Make sure you open a **new** terminal window after installing the SDK. If you use a terminal that was already open before the installation, it may not recognise the `dotnet` command.
+
+2. Type the following command and press **Enter**:
+   ```bash
+   dotnet --version
+   ```
+
+3. **Expected result**: The terminal prints a single line showing a version number, for example:
+   ```
+   8.0.100
+   ```
+   The exact numbers may be slightly different (such as `8.0.101` or `8.0.200`), but the version should start with **8.** or higher.
+
+**If you see a version number starting with `8.`, your .NET SDK is installed correctly and you are ready to use CSharp Hello Learner.**
+
+If you see an error message instead (such as "command not found" or "'dotnet' is not recognized"), see **Section 8: Basic Troubleshooting** for help.
+
+### 5.2 Optional: Run `dotnet --info`
+
+For more detailed information about your .NET installation, you can run `dotnet --info`. This step is optional but can be helpful if you want to confirm exactly what is installed.
+
+1. In the same terminal, type the following command and press **Enter**:
+   ```bash
+   dotnet --info
+   ```
+
+2. **Expected result**: The terminal prints a multi-line report containing detailed information about your .NET installation. This includes:
+   - **.NET SDK version** - The version of the SDK you have installed.
+   - **.NET runtimes** - The runtime versions available on your system.
+   - **Operating system details** - Your OS name, version, and architecture (such as x64 or arm64).
+   - **Installation path** - Where .NET is installed on your computer.
+
+   Example output (shortened):
+   ```
+   .NET SDK:
+    Version:           8.0.100
+    Commit:            abcd1234
+
+   Runtime Environment:
+    OS Name:     Windows
+    OS Version:  10.0.22631
+    OS Platform: Windows
+    RID:         win-x64
+    Base Path:   C:\Program Files\dotnet\sdk\8.0.100\
+
+   .NET SDKs installed:
+     8.0.100 [C:\Program Files\dotnet\sdk]
+
+   .NET runtimes installed:
+     Microsoft.NETCore.App 8.0.0 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+   ```
+
+   Your output will look different depending on your operating system and the specific versions installed, but the key thing is that you should see `.NET SDK` information with a version starting with `8.`.
+
+### Success Criteria
+
+**The key success criterion is seeing a version number that starts with `8.` when you run `dotnet --version`.**
+
+Once you see this, you have successfully installed the .NET 8 SDK and your computer is ready for the CSharp Hello Learner exercises. You can now create, build, and run C# console applications using the `dotnet` command-line tool.
+
+If `dotnet --version` or `dotnet --info` does not work, or if you see an older version number (such as `6.x` or `7.x`), see **Section 8: Basic Troubleshooting and Common Issues** for help.
 
 ---
 
