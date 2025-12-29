@@ -95,8 +95,88 @@ Hello, CSharp Hello Learner!
 
 Every time you run `dotnet run`, this same process repeats. The text inside the quotes is exactly what appears in your terminal window.
 
+## Trying It Yourself: Modifying the Output
+
+One of the best ways to learn is by experimenting. Let's try changing what your program prints to see how it works.
+
+### Changing the Message
+
+You can change the text inside the quotes to make your program say anything you want. This is a great way to personalize your program and see immediate results.
+
+**Try this example:** Open `Program.cs` in your text editor and change the line:
+
+**Before:**
+```csharp
+Console.WriteLine("Hello, World!");
+```
+
+**After:**
+```csharp
+Console.WriteLine("Hello, CSharp Hello Learner!");
+```
+
+**What you'll see:**
+```
+Hello, CSharp Hello Learner!
+```
+
+The text you put inside the quotes is exactly what appears in your terminal. Try changing it to your name, a greeting, or any message you want!
+
+### Adding More Output
+
+You can also add more `Console.WriteLine` statements to print multiple lines. Each statement produces one line of output, in the same order as they appear in your code.
+
+**Try this example:**
+
+**Before:**
+```csharp
+Console.WriteLine("Hello, World!");
+```
+
+**After:**
+```csharp
+Console.WriteLine("Hello, World!");
+Console.WriteLine("Welcome to C# programming!");
+Console.WriteLine("You're doing great!");
+```
+
+**What you'll see:**
+```
+Hello, World!
+Welcome to C# programming!
+You're doing great!
+```
+
+Each `Console.WriteLine` call prints its text on a separate line, in order from top to bottom. You can add as many as you like to create multi-line output.
+
 ## Cross-Platform Compatibility
 
-This `Program.cs` file works the same way on Windows, macOS, and Linux. As long as you have .NET 8 installed and can run `dotnet run` in a terminal, your program will behave identically across all platforms.
+This Program.cs file and all the examples shown above work exactly the same way on **Windows, macOS, and Linux**. As long as you have .NET 8 installed and can run `dotnet run` in a terminal, your program will behave identically across all platforms.
 
 You don't need to change your code for different operating systems. .NET handles those differences for you, so you can focus on learning to program.
+
+The skills you learn here—how to modify output, how to add more lines, and how to run your program—work the same everywhere. This is one of the great benefits of learning C# and .NET.
+
+## What Comes Next
+
+You've learned the fundamentals of how a C# console application works! This foundation will serve you well as you continue your programming journey. Here are some exciting concepts you'll explore next:
+
+### **Variables** - Storing Information
+Variables let you store and reuse information in your programs. Instead of writing the same text over and over, you can store it in a variable and use it multiple times.
+
+### **User Input with Console.ReadLine()** - Interactive Programs
+`Console.ReadLine()` lets your program ask questions and get answers from the user. This turns your program into a two-way conversation instead of just displaying output.
+
+### **If Statements** - Making Decisions
+If statements allow your program to make decisions based on conditions. For example, you could check if a user entered their name and respond differently based on what they typed.
+
+### **Loops** - Repeating Actions
+Loops let you repeat actions multiple times without writing the same code over and over. You could print a message 5 times, or keep asking for input until the user provides a valid answer.
+
+### **Methods** - Organizing Your Code
+Methods (also called functions) let you group related code together and reuse it. This helps keep your programs organized and makes them easier to understand and maintain.
+
+### **And Always... The Entry Point**
+No matter how complex your programs become, they will always start at an entry point. Whether it's the hidden `Main` method in top-level statements or an explicit `Main` method you write yourself, this is where your program's execution begins every time you run it.
+
+The concepts you've learned here—how Program.cs works, how execution flows from top to bottom, and how Console.WriteLine connects code to output—are the foundation for everything else you'll learn in C# programming.
