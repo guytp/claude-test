@@ -312,19 +312,213 @@ If `dotnet --version` or `dotnet --info` does not work, or if you see an older v
 
 ## 6. Minimum Tools You Need (No Full IDE Required)
 
-*Content coming in next step*
+For the **CSharp Hello Learner** exercises, you only need three things:
+
+1. **.NET 8+ SDK** - You installed this using the instructions in this guide. It provides the `dotnet` command-line tool and everything needed to build and run C# applications.
+
+2. **A text editor** - Any basic text editor will work. Here are some options for each operating system:
+   - **Windows**: Notepad (built-in), Notepad++, or Visual Studio Code.
+   - **macOS**: TextEdit (built-in, use plain text mode), or Visual Studio Code.
+   - **Linux**: nano, vim, gedit, Kate, or Visual Studio Code.
+
+3. **A terminal or command prompt** - The built-in terminal on your operating system is all you need. You learned how to open this in Sections 2, 3, and 4.
+
+### You Do NOT Need a Full IDE
+
+You do **not** need to install a full Integrated Development Environment (IDE) such as:
+- Visual Studio (the full version, not Visual Studio Code)
+- JetBrains Rider
+- Other large development tools
+
+These IDEs are powerful tools that professional developers use, but they can be overwhelming for beginners. They also take longer to download, install, and learn. For the early CSharp Hello Learner exercises, a simple text editor and the command line are easier and faster to work with.
+
+> **Tip:** If you already have an IDE installed, you can certainly use it. But if you are just starting out, stick with a basic text editor until you are comfortable with the fundamentals.
+
+### The Basic Workflow
+
+With just these three tools, your workflow will be:
+
+1. **Edit** your code in a text editor (for example, open `Program.cs` and make changes).
+2. **Build** your project by running `dotnet build` in the terminal.
+3. **Run** your project by running `dotnet run` in the terminal.
+4. **See the output** in the terminal window.
+5. **Repeat** - make more changes, build, and run again.
+
+This simple cycle is all you need to learn the basics of C# programming.
 
 ---
 
 ## 7. Offline-Friendly Usage
 
-*Content coming in next step*
+Once the .NET SDK is installed on your computer, most of your learning with CSharp Hello Learner can happen **offline** - without an internet connection.
+
+### 7.1 What You Can Do Offline
+
+With only the local SDK, a text editor, and your terminal, you can do all of the following without needing the internet:
+
+- **Create a new console project:**
+  ```bash
+  dotnet new console
+  ```
+  This creates a new C# console application with a basic `Program.cs` file.
+
+- **Edit your code:**
+  Open `Program.cs` in your text editor and make changes. Try different console messages, add variables, or experiment with loops and conditions.
+
+- **Build your project:**
+  ```bash
+  dotnet build
+  ```
+  This compiles your code and checks for errors.
+
+- **Run your project:**
+  ```bash
+  dotnet run
+  ```
+  This builds (if needed) and runs your application, showing the output in the terminal.
+
+All of these commands use only the SDK that is already installed on your machine. You can work through the CSharp Hello Learner exercises on a train, in a coffee shop without WiFi, or anywhere else without an internet connection.
+
+### 7.2 When You Still Need the Internet
+
+You will need an internet connection for these activities:
+
+- **Downloading and installing the .NET SDK** - The initial installation (which you have already completed using this guide) requires downloading files from Microsoft.
+
+- **Updating the SDK to a newer version** - If you want to install a newer version of .NET in the future, you will need to download it.
+
+- **Reading online documentation or tutorials** - If you want to look up how something works or read additional learning materials.
+
+- **Downloading NuGet packages** - Advanced projects sometimes use external libraries. The CSharp Hello Learner exercises do not require any external packages, so this does not apply to beginners.
+
+> **Tip:** If you expect to be offline for a while, you can download or print the CSharp Hello Learner materials in advance so you have everything you need.
 
 ---
 
 ## 8. Basic Troubleshooting and Common Issues
 
-*Content coming in next step*
+This section lists common problems that beginners may encounter and provides simple steps to fix them.
+
+### Issue 1: `dotnet` is Not Recognised / Command Not Found
+
+**Symptom:**
+
+- On **Windows**, you see an error like:
+  ```
+  'dotnet' is not recognized as an internal or external command,
+  operable program or batch file.
+  ```
+- On **macOS** or **Linux**, you see:
+  ```
+  command not found: dotnet
+  ```
+
+**Possible Causes and Fixes:**
+
+1. **The terminal was open before you installed the SDK.**
+   - Close the terminal or command prompt completely.
+   - Open a **new** terminal window.
+   - Try running `dotnet --version` again.
+
+2. **The installation did not complete successfully.**
+   - Re-run the installer (Windows/macOS) or the installation commands (Linux).
+   - Watch for any error messages during the installation process.
+
+3. **The `dotnet` folder is not on your PATH** (macOS/Linux).
+   - Close and re-open your terminal.
+   - Run `which dotnet` to see if the system can find the dotnet command.
+   - If nothing is printed, check the official documentation for PATH setup:
+     - macOS: https://learn.microsoft.com/dotnet/core/install/macos
+     - Linux: https://learn.microsoft.com/dotnet/core/install/linux
+
+### Issue 2: `dotnet --version` Shows an Older Version (e.g. 6.x or 7.x)
+
+**Symptom:**
+
+You run `dotnet --version` and see an older version number like:
+```
+6.0.400
+```
+or
+```
+7.0.100
+```
+
+**Possible Causes and Fixes:**
+
+1. **You have not installed .NET 8 yet.**
+   - Download and install the .NET 8 SDK using this guide or from https://dotnet.microsoft.com/download
+
+2. **You have multiple SDK versions installed, and an older one is being used.**
+   - After installing .NET 8, open a **new** terminal and run `dotnet --version` again.
+   - If you still see an older version, check which `dotnet` executable is being used:
+     - On macOS/Linux: `which dotnet`
+     - On Windows (PowerShell): `Get-Command dotnet`
+   - If necessary, reinstall the .NET 8 SDK from the official site and repeat the verification.
+
+> **Note:** It is fine to have multiple SDK versions installed side by side. For new projects, .NET typically uses the latest SDK available. If you see version 8.x or higher, you are ready to proceed.
+
+### Issue 3: Insufficient Permissions on Linux
+
+**Symptom:**
+
+You see errors like `permission denied` or messages saying you are not allowed to install packages.
+
+**Possible Causes and Fixes:**
+
+1. **You forgot to use `sudo` for system-level commands.**
+   - Make sure you are using `sudo` when running installation commands. For example:
+     ```bash
+     sudo apt-get install -y dotnet-sdk-8.0
+     ```
+
+2. **You are on a managed or locked-down machine.**
+   - If you are using a school, work, or shared computer, you may not have permission to install software.
+   - Contact your system administrator and ask them to install the .NET 8 SDK for you.
+
+### Issue 4: Installer Fails or Stops Unexpectedly (Windows/macOS)
+
+**Symptom:**
+
+The installer shows an error message and does not complete, or it stops partway through without finishing.
+
+**Possible Causes and Fixes:**
+
+1. **Try restarting your computer and running the installer again.**
+   - Sometimes a restart clears temporary issues that prevent installation.
+
+2. **Make sure you downloaded the correct installer for your system.**
+   - Windows: Choose x64 for most PCs, or Arm64 if you have an ARM-based device.
+   - macOS: Choose x64 for Intel Macs, or Arm64 for Apple Silicon (M1/M2/M3/M4).
+
+3. **Check if antivirus or security software is blocking the installer.**
+   - Some security software may block installers. Temporarily allow the official Microsoft installer if it is safe to do so.
+
+4. **Check the official troubleshooting pages:**
+   - Windows: https://learn.microsoft.com/dotnet/core/install/windows
+   - macOS: https://learn.microsoft.com/dotnet/core/install/macos
+
+### Issue 5: `dotnet --info` Works but Project Commands Fail Later
+
+**Symptom:**
+
+Running `dotnet --info` shows your SDK is installed, but when you try to create, build, or run a project, you get errors.
+
+**Possible Causes and Fixes:**
+
+This issue is usually **not** related to the SDK installation itself. If `dotnet --info` works, your SDK is installed correctly.
+
+- Check the specific error message - it will often tell you what is wrong.
+- Make sure you are in the correct directory (folder) when running project commands.
+- Re-read the instructions in the relevant CSharp Hello Learner exercise for guidance.
+
+### Official Documentation Links
+
+If you continue to have problems, refer to the official Microsoft installation and troubleshooting documentation:
+
+- **Windows**: https://learn.microsoft.com/dotnet/core/install/windows
+- **macOS**: https://learn.microsoft.com/dotnet/core/install/macos
+- **Linux**: https://learn.microsoft.com/dotnet/core/install/linux
 
 ---
 
