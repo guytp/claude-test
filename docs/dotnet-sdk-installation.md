@@ -1,6 +1,11 @@
-# Install and Verify .NET 8+ SDK
+# Install and Verify .NET 8+ SDK (Windows, macOS, Linux)
 
 This guide will help you install the .NET 8 SDK on your computer and verify that it works correctly. Follow the instructions for your operating system (Windows, macOS, or Linux) to get ready to build and run the CSharp Hello Learner console application.
+
+**What you need to follow this guide:**
+- About 10-15 minutes of time.
+- An internet connection (for the initial download only).
+- Permission to install software on your computer.
 
 ---
 
@@ -29,6 +34,16 @@ Once you have the .NET SDK installed, you'll be able to:
 - Edit your code in any text editor
 - Build and run your programs using simple commands
 - See your code changes in action immediately
+
+### What Tools Do You Need?
+
+To work through the CSharp Hello Learner exercises, you only need **three things**:
+
+1. **The .NET 8+ SDK** - which you will install using this guide.
+2. **A text editor** - any basic editor will work (Notepad on Windows, TextEdit on macOS, or nano/vim on Linux). You do not need a fancy IDE.
+3. **A terminal or command prompt** - the built-in terminal on your operating system is all you need.
+
+That's it! You do **not** need to install Visual Studio, Rider, or any other large development environment. Those tools are helpful for bigger projects, but for learning C# basics, a simple text editor and the command line are enough.
 
 Let's get started with the installation for your operating system.
 
