@@ -55,6 +55,28 @@ When you type `dotnet run`:
 
 So even though you don't see the Main method, it's there working behind the scenes. This lets you focus on writing simple, clear code without extra structure.
 
+## Step-by-step execution flow
+
+Here's exactly what happens when you type `dotnet run` and see your greeting:
+
+1. **dotnet run builds the project** (if needed)  
+   The dotnet tool checks if your code has changed. If it has, it "builds" your project, which means it converts your C# code into a format your computer can run. Think of it like translating your instructions into a language the computer understands.
+
+2. **The .NET runtime starts at the hidden Main method**  
+   .NET looks for the entry point (the hidden Main method we talked about) and starts running your program from there.
+
+3. **Your top-level statements run from top to bottom**  
+   The runtime executes each line of code in your Program.cs file, starting from the first line and moving down.
+
+4. **Console.WriteLine("Hello, CSharp Hello Learner!"); runs**  
+   When the program reaches this line, it calls the WriteLine method, which prints your greeting to the terminal.
+
+5. **You see the text in your terminal**  
+   The words "Hello, CSharp Hello Learner!" appear in your terminal window.
+
+6. **The program exits**  
+   Because there are no more statements to run, the program finishes and you see your terminal prompt again.
+
 ## Why is Program.cs important?
 
 In this simple project, **everything** your program does is written in this one file. When you're learning C#, having just one file makes it easier to understand what's happening.
