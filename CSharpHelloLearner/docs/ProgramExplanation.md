@@ -77,6 +77,76 @@ Here's exactly what happens when you type `dotnet run` and see your greeting:
 6. **The program exits**  
    Because there are no more statements to run, the program finishes and you see your terminal prompt again.
 
+## Breaking down Console.WriteLine
+
+Let's look at the line that prints your greeting:
+
+```csharp
+Console.WriteLine("Hello, CSharp Hello Learner!");
+```
+
+### What each part means
+
+**Console**  
+A built-in .NET class that represents your terminal window. It's how your program talks to the terminal.
+
+**WriteLine**  
+A method that prints text to the terminal. The "Line" part means it moves to the next line after printing.
+
+**"Hello, CSharp Hello Learner!"**  
+A string literal - text inside double quotes. Whatever you put here appears exactly in the terminal.
+
+**;**  
+The semicolon ends the statement. It tells C# this instruction is complete.
+
+### Before and after
+
+**Code in Program.cs:**
+```csharp
+Console.WriteLine("Hello, CSharp Hello Learner!");
+```
+
+**Terminal output:**
+```
+Hello, CSharp Hello Learner!
+```
+
+### Try a change
+
+Edit the text inside the quotes:
+
+**Change to:**
+```csharp
+Console.WriteLine("Learning C# is fun!");
+```
+
+**See the difference:**
+```
+Learning C# is fun!
+```
+
+### Add more lines
+
+You can add more Console.WriteLine statements. They print in order:
+
+**Code:**
+```csharp
+Console.WriteLine("First line");
+Console.WriteLine("Second line");
+Console.WriteLine("Third line");
+```
+
+**Output:**
+```
+First line
+Second line
+Third line
+```
+
+### Works everywhere
+
+This simple Program.cs file works the same way on Windows, macOS, and Linux as long as the .NET SDK is installed and you use `dotnet run` from a terminal.
+
 ## Why is Program.cs important?
 
 In this simple project, **everything** your program does is written in this one file. When you're learning C#, having just one file makes it easier to understand what's happening.
