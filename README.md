@@ -51,7 +51,7 @@ This project demonstrates:
 
 **New to programming or running into errors?** Don't worry! Check out our beginner-friendly troubleshooting guide:
 
-📖 **[Troubleshooting Guide (TROUBLESHOOTING.md)](TROUBLESHOOTING.md)
+📖 **[Troubleshooting Guide](TROUBLESHOOTING.md)**
 
 This guide helps you fix common problems step-by-step:
 - Missing .NET SDK or `dotnet` command not found
