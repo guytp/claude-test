@@ -4,7 +4,7 @@
 
 **Project Type**: ASP.NET Core WebAPI (currently) with documentation for C# beginner learning materials
 **Target Framework**: .NET 8.0
-**Main Branch**: `main` (development on `story-16` for Story 16: Troubleshooting Documentation)
+**Main Branch**: `main`
 
 This project serves dual purposes:
 1. An ASP.NET Core WebAPI implementation (WebApi folder)
@@ -31,9 +31,9 @@ The user story focus is on creating beginner-friendly troubleshooting documentat
 
 ## Current Work Context
 
-- **Active Branch**: `story-16` (tracking remote origin/story-16)
 - **User Story**: Story 16 - Document common setup and run errors with simple troubleshooting tips
 - **Recent Changes**: Added comprehensive troubleshooting guide at project root for C# beginners
+- **Current Focus**: Maintaining beginner-friendly documentation and ensuring cross-platform compatibility
 
 ## Coding Standards to Follow
 
@@ -116,7 +116,7 @@ Manual validation scenarios for troubleshooting guide:
 - **Main branch**: `main`
 - **Feature branches**: Use descriptive names (e.g., `story-16`)
 - **Commit messages**: Clear, descriptive, imperative mood
-- **Current branch**: `story-16` (do not merge to main until story is complete)
+- **Feature branches**: Use descriptive names and merge to main when complete
 
 ## Dependencies and Constraints
 
